@@ -3,7 +3,7 @@
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 	static int size = 2;
 	returnSize = & size;
-	static int result[2];
+	int* result=malloc(2*sizeof(int));
 	result[0]=0;
 	result[1]=numsSize-1;
 	
@@ -22,8 +22,8 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
 
 
 int main(){
-	int nums[]={1,2,3,4};
+	int nums[]={2,7,11,15};
 	int z;
-	int* res=twoSum(nums,4,3,&z);
+	int* res=twoSum(nums,4,9,&z);
 	printf("%d %d",res[0],res[1]);
 }
